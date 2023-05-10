@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <title>Adivina el Numero</title>
+</head>
+<body>
+    
+    <!-- MARCO JUEGO -->
+    <div class="position-absolute top-50 start-50 translate-middle p-3 bg-dark">
+        <!-- SMS ADIVINO -->
+        <div class="container w-auto text-center my-1 bg-danger fw-bold">
+            <div class="text-light fs-2" id="respuesta"></div>
+            <div class="text-light" id="error"></div>
+        </div>
+        <!-- FIN SMS ADIVINO -->
+
+        <!-- NUMERO INGRESO Y GENERADO -->
+        <div class="d-flex flex-row">
+            <!-- FORMULARIO INGRESAR NUMERO -->
+            
+                <!-- AQUI VA EL HU2 -->
+
+            <!-- FIN FORMULARIO INGRESO NUMERO -->
+            <!-- NUMERO GENERADO -->
+                <div class="d-flex flex-column w-50 m-1 text-center">
+                    <div class="col p-1 mb-1 fw-bold text-light">
+                        <label>Número Aleatorio</label>
+                    </div>
+                    <div class="col d-flex justify-content-center p-1">
+                        <div class="w-25 bg-light" id="numGenerado"></div>
+                    </div>
+                </div>
+            <!-- FIN NUMERO GENERADO -->
+        </div>
+        <!-- FIN NUMERO INGRESO Y GENERADO -->
+
+        <!-- BOTONES REINICIAR GENERAR -->
+        <div class="d-flex flex-row">
+            <!-- REINICIAR -->
+            
+                <!-- AQUI VA EL HU6 -->
+
+            <!-- FIN REINICIAR -->
+            <!-- GENERAR -->
+            <div class="col d-flex justify-content-center">
+                <button type="button" id="generar" class="btn btn-success" onclick="aleatorio()">Generar Número</button>
+            </div>
+            <!-- FIN GENERAR -->
+        </div>
+        <!-- FIN BOTONES REINICIAR GENERAR -->
+
+        <!-- REGLAS DEL JUEGO -->
+        
+            <!-- AQUI VA EL HU4 -->
+
+        <!-- FIN REGLAS DEL JUEGO -->
+    </div>
+    <!-- FIN MARCO JUEGO -->
+
+    <!-- SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="juego.js"></script>
+</body>
+</html>
