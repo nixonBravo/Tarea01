@@ -30,3 +30,9 @@ function aleatorio() {
 
 }
 /* FIN GENERAR NUMERO */
+function Reiciniar()
+{
+    document.getElementById("repuesta").style.display='none';
+    document.getElementById("error").style.display='none';
+    document.getElementById("numUsuario").value='';
+}
