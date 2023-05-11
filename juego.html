@@ -9,13 +9,13 @@
     <title>Adivina el Numero</title>
 </head>
 <body>
-    <h1>Bienvenidos al Juego</h1>
+    <h1 style="margin-top: 3%;">Bienvenidos al Juego</h1>
     
     <!-- MARCO JUEGO -->
     <div class="position-absolute top-50 start-50 translate-middle p-3 bg-dark">
         <!-- SMS ADIVINO -->
         <div class="container w-auto text-center my-1 bg-danger fw-bold">
-            <div class="text-light fs-2" id="respuesta"></div>
+            <div class="text-light fs-2"  id="respuesta"></div>
             <div class="text-light" id="error"></div>
         </div>
         <!-- FIN SMS ADIVINO -->
@@ -23,35 +23,51 @@
         <!-- NUMERO INGRESO Y GENERADO -->
         <div class="d-flex flex-row">
             <!-- FORMULARIO INGRESAR NUMERO -->
-            
+             <form action="">
+                <div class="row g-3 align-items-center" style="margin-left: 25%;">
+                    <div>
+                      <label for="inputPassword6" class="col-form-label" style="color:white ; display: block;"> <b>Ingresar número </b> </label>
+                    </div>
+                    <div class="col-auto" style="width: 38%; align-items: center; margin-left: 20%; margin-bottom:12% ; ">
+                      <input min="1" max="10" type="number" id="numero-ingresado" class="form-control" aria-labelledby="passwordHelpInline">
+                    </div>
+                  </div>
+             </form>
                 <!-- AQUI VA EL HU2 -->
+                
 
             <!-- FIN FORMULARIO INGRESO NUMERO -->
             <!-- NUMERO GENERADO -->
                 <div class="d-flex flex-column w-50 m-1 text-center">
                     <div class="col p-1 mb-1 fw-bold text-light">
-                        <label>Número Aleatorio</label>
+                        <label style="margin-left: 12%;">Número Aleatorio</label>
                     </div>
-                    <div class="col d-flex justify-content-center p-1">
-                        <div class="w-25 bg-light" id="numGenerado"></div>
-                    </div>
+                    <div class="col-auto" style="background-color: white ; margin-bottom: 9%; margin-left: 45%; width:25%; height: 30%;">
+                        <form >
+                            <label  id="resultado"></label>
+                        </form>
+                        
+                      </div>
+                   
                 </div>
+               
             <!-- FIN NUMERO GENERADO -->
         </div>
+        
         <!-- FIN NUMERO INGRESO Y GENERADO -->
 
         <!-- BOTONES REINICIAR GENERAR -->
         <div class="d-flex flex-row">
             <!-- REINICIAR -->
             <div class="col d-flex justify-content-center">
-                <button type="button" class="btn btn-danger"id="Reiniciar" onclick="Reiciniar()">Reiniciar Juego</button>
+                <button type="button" class="btn btn-danger"id="Reiniciar" onclick="limpiarInput()" >Reiniciar Juego</button>
             </div>
 
                         
             <!-- FIN REINICIAR -->
             <!-- GENERAR -->
-            <div class="col d-flex justify-content-center">
-                <button type="button" id="generar" class="btn btn-success" onclick="aleatorio()">Generar Número</button>
+            <div class="col d-flex justify-content-center" >
+                <button type="button" id="generar" class="btn btn-success" onclick="generarNumeroAleatorio()"   >Generar Número</button>
             </div>
             <!-- FIN GENERAR -->
         </div>
@@ -60,17 +76,23 @@
         <!-- REGLAS DEL JUEGO -->
         
             <!-- AQUI VA EL HU4 -->
-            <div class="card" style="width: 18rem; margin: 10px; background-color: rgba(22, 3, 3, 0.267); color: white;">
+            <div class="card" style="width: 32rem; position: relative; z-index: 1; margin: 10px; background-color: rgba(22, 3, 3, 0.267); color: white; ">
                 <div class="card-body">
                   <h5 class="card-title" style="text-align: center;">Reglas del juego</h5>
-                  <p class="card-text" style="text-align: justify">Ingresar un número en la parte izquierda, luego haz click en el botón "Generar número". Si el número que ingresaste es igual al número generado por el botón será una victoria caso contrario perderás.</p>
+                  <p class="card-text" style="text-align: justify">Ingresar un número del 1 al 10 en la parte izquierda, luego haz click en el botón "Generar número". Si el número que ingresaste es igual al número generado por el botón será una victoria caso contrario perderás.</p>
                 </div>
               </div>
 
         <!-- FIN REGLAS DEL JUEGO -->
     </div>
+    <div class="col-auto" style="margin-left: 47%; margin-top: 11%;position: absolute; z-index: 1;">
+        <form a>
+            <label type="text" id="mensaje"  style="background-color: red; text-align: center; "></label>
+        </form>
+        
+      </div>
     <!-- FIN MARCO JUEGO -->
-
+    
     <!-- SCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src="juego.js"></script>
